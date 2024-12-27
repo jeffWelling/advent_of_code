@@ -94,7 +94,6 @@ func sortInput(input *inputList) error {
 func countDifference(input *inputList) (error, int) {
 	total := 0
 	length_limit := len((*input)[0])
-	log.Println(length_limit)
 	for i := 0; i < length_limit; i++ {
 		total += difference((*input)[0][i], (*input)[1][i])
 	}
