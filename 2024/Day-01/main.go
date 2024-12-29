@@ -77,6 +77,23 @@ func main() {
 	if err != nil {
 		fmt.Printf("Error: %v\n", err)
 	}
+	fmt.Println("Total difference: ", total)
+
+	count := make(map[int]int)
+	for _, num := range (*input)[1] {
+		count[num]++
+	}
+
+	result := 0
+	for _, num := range (*input)[0] {
+		// If count contains num
+		if count[num] > 0 {
+			result += num * count[num]
+		}
+	}
+
+	fmt.Println("Result: ", result)
+
 }
 
 // sortInput() takes a pointer to an inputList, and sorts each of the slices
