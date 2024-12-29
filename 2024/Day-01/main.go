@@ -48,7 +48,6 @@ func parseInput() (error, *inputList) {
 
 		part_0, err := strconv.Atoi(parts[0])
 		if err != nil {
-			log.Println(err)
 			return err, nil
 		}
 		part_1, err := strconv.Atoi(parts[1])
@@ -78,7 +77,6 @@ func main() {
 	if err != nil {
 		fmt.Printf("Error: %v\n", err)
 	}
-	fmt.Println(total)
 }
 
 // sortInput() takes a pointer to an inputList, and sorts each of the slices
